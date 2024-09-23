@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  web:
+    image: nginx:latest
+    container_name: personal_web
+    hostname: personal_web
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+     - ./data:/usr/share/nginx/html
+    restart: unless-stopped

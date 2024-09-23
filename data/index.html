@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ethan M. Lee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/cat.gif" type="image/gif">
+  </head>
+  
+  <div style="float:left;">
+    <img src="assets/portrait.webp" width="300">
+  </div>
+  
+  <body class="body_foreground body_background" style="font-size: large; white-space: nowrap;">
+    <div style="padding-left:10px; display: inline-block; text-align: left; max-width: 600px;">
+  
+    <div id="lolban"></div>
+  
+    <big>
+      <br>
+      <div>DoB: Oct 05, 2000</div>
+      <div>Systems Architect (DevOps Engineer) at BeyondMD</div>
+    </big>
+      
+      <br>
+      <div>
+        random pastebin thing:
+        <code>
+          <div># recursive find and replace for all files in a directory</div>
+          <div>grep -Ril 'old_string' . \</div>
+          <div>| tr '\n' '\0' \</div>
+          <div>| xargs -0 sed -i 's/old_string/new_string/g'</div>
+        </code>
+      </div>
+      <br>
+      <div><a href="https://github.com/ethanmlee" target="_blank" rel="noopener">github</a></div>
+      <div><a href="https://www.linkedin.com/in/ethan-m-lee-8716711a0/" target="_blank" rel="noopener">linkedin</a></div>
+      <div><a href="mailto:ethan@ethanmlee.com">email</a></div>
+  
+    <script>
+    // Fetch and inject lolban content into the page
+      fetch('lolban.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('lolban').innerHTML = data;
+      })
+      .catch(error => console.error('Error fetching header:', error));
+    </script>
+  
+    </div>
+  </body>
+</html>
