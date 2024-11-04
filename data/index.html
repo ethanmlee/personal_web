@@ -41,10 +41,14 @@
       <div>
         random pastebin thing:
         <code>
-          <div># recursive find and replace for all files in a directory</div>
-          <div>grep -Ril 'old_string' . \</div>
-          <div>| tr '\n' '\0' \</div>
-          <div>| xargs -0 sed -i 's/old_string/new_string/g'</div>
+          <div># run firefox inside of a container and forward it to your host's Xorg Server</div>
+          <div>docker run -it --rm \</div>
+          <div>--volume="$HOME/.Xauthority:/root/.Xauthority:rw" \</div>
+          <div>--env="DISPLAY" \</div>
+          <div>--net=host \</div>
+          <div>--privileged \</div>
+          <div>jlesage/firefox \</div>
+          <div>firefox</div>
         </code>
       </div>
 
